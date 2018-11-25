@@ -93,11 +93,11 @@ public class KerberosServer {
   
   public boolean validateTicket(String ticket) {
 	  try { Properties props = new Properties();
-      props.load( new FileInputStream( "C:\\Users\\Administrator\\workspace\\KerberosSeurity\\server.properties"));
+      props.load( new FileInputStream( "C:\\Users\\Administrator\\workspace\\KerberosSecurity\\server.properties"));
       System.setProperty( "sun.security.krb5.debug", "false");
       System.setProperty( "java.security.krb5.realm", props.getProperty( "realm"));
       System.setProperty( "java.security.krb5.kdc", props.getProperty( "kdc"));
-      System.setProperty( "java.security.auth.login.config", "C:\\Users\\Administrator\\workspace\\KerberosSeurity\\jaas.conf");
+      System.setProperty( "java.security.auth.login.config", "C:\\Users\\Administrator\\workspace\\KerberosSecurity\\jaas.conf");
       System.setProperty( "javax.security.auth.useSubjectCredsOnly", "true");
       String password = props.getProperty( "service.password");
       // Oid mechanism = use Kerberos V5 as the security mechanism.

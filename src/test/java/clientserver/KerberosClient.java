@@ -78,12 +78,12 @@ public class KerberosClient {
 		      Properties props = new Properties();
 //		      String path = "${path}";
 //		      props.load( new FileInputStream( "client.properties"));
-		      props.load( new FileInputStream( "C:\\Users\\Administrator\\workspace\\KerberosSeurity\\client.properties"));
+		      props.load( new FileInputStream( "C:\\Users\\Administrator\\workspace\\KerberosSecurity\\client.properties"));
 		      
 		      System.setProperty( "sun.security.krb5.debug", "false");
 		      System.setProperty( "java.security.krb5.realm", props.getProperty( "realm")); 
 		      System.setProperty( "java.security.krb5.kdc", props.getProperty( "kdc"));
-		      System.setProperty( "java.security.auth.login.config", "C:\\Users\\Administrator\\workspace\\KerberosSeurity\\jaas.conf");
+		      System.setProperty( "java.security.auth.login.config", "C:\\Users\\Administrator\\workspace\\KerberosSecurity\\jaas.conf");
 		      System.setProperty( "javax.security.auth.useSubjectCredsOnly", "true");
 		      String username = props.getProperty( "client.principal.name");
 		      String password = props.getProperty( "client.password");
